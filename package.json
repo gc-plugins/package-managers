@@ -1,0 +1,22 @@
+{
+  "name": "package-managers",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gc-plugins/package-managers.git"
+  },
+  "author": "Ian Renyard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gc-plugins/package-managers/issues"
+  },
+  "homepage": "https://github.com/gc-plugins/package-managers#readme",
+  "dependencies": {
+    "jsdom": "^9.8.3"
+  }
+}
