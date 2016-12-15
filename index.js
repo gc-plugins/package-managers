@@ -5,7 +5,7 @@ let shell = require('electron').shell,
     jsdom = require('jsdom'),
     currentTerm;
 
-exports.init = (config) => {};
+exports.init = ({config}) => {};
 
 exports.setConfig = () => {};
 
@@ -20,7 +20,7 @@ function getPackageDetails(elm) {
     };
 }
 
-exports.process = (term, stream) => {
+exports.process = ({keyword, term, stream}) => {
     // If the term is empty, return no results.
     if (/^\s*$/.test(term)) {
         stream.end(undefined);
@@ -49,7 +49,8 @@ exports.process = (term, stream) => {
         win.close();
     });
 };
-exports.execute = (key) => {
+
+exports.execute = ({key}) => {
     return new Promise((resolve, reject) => {
         if (/^https?\:\/\//.test(key)) {
             shell.openExternal(key);
@@ -61,6 +62,6 @@ exports.execute = (key) => {
     });
 };
 
-exports.prefix = [
+exports.keyword = [
     'npm'
 ];
