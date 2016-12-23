@@ -16,7 +16,7 @@ function getPackageDetails(elm) {
         key: nameElm.href,
         title: nameElm.textContent,
         description: elm.querySelector('.description').textContent,
-        icon: path.resolve(__dirname, 'img', 'npm.png')
+        icon: encodeURI(path.resolve(__dirname, 'img', 'npm.png'))
     };
 }
 
